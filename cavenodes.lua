@@ -176,7 +176,7 @@ minetest.register_decoration({
     place_offset_y = -1,
     fill_ratio = 16,
     flags = "force_placement,all_floors",
-    y_max = -30,
+    y_max = -40,
     y_min = -700, -- 90
     decoration = "livingcaves:mushcave_bottom",
 	noise_params = {
@@ -198,7 +198,7 @@ minetest.register_decoration({
     place_offset_y = -1,
     fill_ratio = 16,
     flags = "force_placement,all_ceilings",
-    y_max = -30,
+    y_max = -40,
     y_min = -700, -- 90
     decoration = "livingcaves:mushcave_bottom2",
 	noise_params = {
