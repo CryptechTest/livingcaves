@@ -154,7 +154,7 @@ minetest.register_node("livingcaves:bacteriacave_nestfoot", {
 
 minetest.register_node("livingcaves:bacteriacave_nest", {
 	description = S("Bacteria Nest Core"),
-tiles = {
+	tiles = {
 		{
 			name = "livingcaves_bacteriacave_nest.png",
 			animation = {type="vertical_frames", length = 4}
@@ -167,46 +167,26 @@ tiles = {
 	sounds = default.node_sound_stone_defaults(),
 })
 
-
+-- mid
 minetest.register_decoration({
     deco_type = "simple",
     place_on = {"default:stone"},
     is_ground_content = true,
-    sidelen = 16,
+    sidelen = 8,
     place_offset_y = -1,
-    fill_ratio = 8,
-    flags = "force_placement,all_floors",
-    y_max = -30,
-    y_min = -90,
-    decoration = "livingcaves:mushcave_bottom"
-
-})
-
-minetest.register_decoration({
-    deco_type = "simple",
-    place_on = {"default:stone"},
-    is_ground_content = true,
-    sidelen = 16,
-    place_offset_y = -1,
-    fill_ratio = 8,
-    flags = "force_placement,all_ceilings",
-    y_max = -30,
-    y_min = -90,
-    decoration = "livingcaves:mushcave_bottom2"
-
-})
-
-minetest.register_decoration({
-    deco_type = "simple",
-    place_on = {"default:stone"},
-    is_ground_content = true,
-    sidelen = 16,
-    place_offset_y = -1,
-    fill_ratio = 8,
+    fill_ratio = 16,
     flags = "force_placement,all_floors",
     y_max = -90,
-    y_min = -200,
-    decoration = "livingcaves:dripstonecave_bottom"
+    y_min = -700, -- 90
+    decoration = "livingcaves:mushcave_bottom",
+	noise_params = {
+		offset = 0,
+		scale = 8,
+		spread = {x=4, y=8, z=4},
+		seed = 192,
+		octaves = 2,
+		persist = 0.6
+	},
 
 })
 
@@ -214,27 +194,44 @@ minetest.register_decoration({
     deco_type = "simple",
     place_on = {"default:stone"},
     is_ground_content = true,
-    sidelen = 16,
+    sidelen = 8,
     place_offset_y = -1,
-    fill_ratio = 8,
+    fill_ratio = 16,
     flags = "force_placement,all_ceilings",
     y_max = -90,
-    y_min = -200,
-    decoration = "livingcaves:dripstonecave_bottom2"
+    y_min = -700, -- 90
+    decoration = "livingcaves:mushcave_bottom2",
+	noise_params = {
+		offset = 0,
+		scale = 8,
+		spread = {x=4, y=8, z=4},
+		seed = 192,
+		octaves = 2,
+		persist = 0.6
+	},
 
 })
 
+-- lower
 minetest.register_decoration({
     deco_type = "simple",
     place_on = {"default:stone"},
     is_ground_content = true,
-    sidelen = 16,
+    sidelen = 8,
     place_offset_y = -1,
-    fill_ratio = 8,
+    fill_ratio = 16,
     flags = "force_placement,all_floors",
-    y_max = -200,
-    y_min = -400,
-    decoration = "livingcaves:bacteriacave_bottom"
+    y_max = -600, -- 90
+    y_min = -11000, -- 200
+    decoration = "livingcaves:dripstonecave_bottom",
+	noise_params = {
+		offset = 0.2,
+		scale = 5,
+		spread = {x=8, y=16, z=8},
+		seed = 256,
+		octaves = 2,
+		persist = 0.6
+	},
 
 })
 
@@ -242,13 +239,66 @@ minetest.register_decoration({
     deco_type = "simple",
     place_on = {"default:stone"},
     is_ground_content = true,
-    sidelen = 16,
+    sidelen = 8,
     place_offset_y = -1,
-    fill_ratio = 8,
+    fill_ratio = 16,
     flags = "force_placement,all_ceilings",
-    y_max = -200,
-    y_min = -400,
-    decoration = "livingcaves:bacteriacave_bottom2"
+    y_max = -600,-- 90
+    y_min = -11000, -- 200
+    decoration = "livingcaves:dripstonecave_bottom2",
+	noise_params = {
+		offset = 0.2,
+		scale = 5,
+		spread = {x=8, y=16, z=8},
+		seed = 256,
+		octaves = 2,
+		persist = 0.6
+	},
+
+})
+
+-- deep
+minetest.register_decoration({
+    deco_type = "simple",
+    place_on = {"default:stone"},
+    is_ground_content = true,
+    sidelen = 8,
+    place_offset_y = -1,
+    fill_ratio = 48,
+    flags = "force_placement,all_floors",
+    y_max = -5000,
+    y_min = -11000,
+    decoration = "livingcaves:bacteriacave_bottom",
+	noise_params = {
+		offset = 0.5,
+		scale = 2,
+		spread = {x=40, y=32, z=40},
+		seed = 1024,
+		octaves = 2,
+		persist = 0.6
+	},
+
+})
+
+minetest.register_decoration({
+    deco_type = "simple",
+    place_on = {"default:stone"},
+    is_ground_content = true,
+    sidelen = 8,
+    place_offset_y = -1,
+    fill_ratio = 32,
+    flags = "force_placement,all_ceilings",
+    y_max = -5000,
+    y_min = -11000,
+    decoration = "livingcaves:bacteriacave_bottom2",
+	noise_params = {
+		offset = 0.5,
+		scale = 2,
+		spread = {x=48, y=32, z=48},
+		seed = 1024,
+		octaves = 2,
+		persist = 0.6
+	},
 
 })
 
@@ -262,7 +312,7 @@ minetest.register_decoration({
     biomes = {"snowy_grassland", "icesheet_under", "icesheet", "snowy_grassland_under", "tundra_highland", "tundra_beach", "tundra_under", "taiga", "taiga_under", "livingfloatlands:coldsteppe"},
     flags = "force_placement,all_floors",
     y_max = -1,
-    y_min = -30,
+    y_min = -90, -- 30
     decoration = "livingcaves:icecave_ice"
 
 })
@@ -277,7 +327,7 @@ minetest.register_decoration({
     biomes = {"snowy_grassland", "icesheet_under", "icesheet", "snowy_grassland_under", "tundra_highland", "tundra_beach", "tundra_under", "taiga", "taiga_under", "livingfloatlands:coldsteppe"},
     flags = "force_placement,all_ceilings",
     y_max = -1,
-    y_min = -30,
+    y_min = -90, -- 30
     decoration = "livingcaves:icecave_ice2"
 
 })
@@ -292,7 +342,7 @@ minetest.register_decoration({
     biomes = {"coniferous_forest_under", "coniferous_forest", "deciduous_forest_under", "deciduous_forest", "savanna", "savanna_under", "rainforest", "rainforest_swamp", "rainforest_under", "naturalbiomes:alpine", "naturalbiomes:mediterranean", "naturalbiomes:wetsavanna", "livingjungle:jungle", "livingfloatlands:coldgiantforest", "livingfloatlands:giantforest", "livingfloatlands:paleojungle"},
     flags = "force_placement,all_ceilings",
     y_max = -1,
-    y_min = -30,
+    y_min = -90, -- 30
     decoration = "livingcaves:rootdirt"
 
 })
@@ -307,7 +357,7 @@ minetest.register_decoration({
     biomes = {"coniferous_forest_under", "coniferous_forest", "deciduous_forest_under", "deciduous_forest", "savanna", "savanna_under", "rainforest", "rainforest_swamp", "rainforest_under", "naturalbiomes:alpine", "naturalbiomes:mediterranean", "naturalbiomes:wetsavanna", "livingjungle:jungle", "livingfloatlands:coldgiantforest", "livingfloatlands:giantforest", "livingfloatlands:paleojungle"},
     flags = "force_placement,all_ceilings",
     y_max = -1,
-    y_min = -30,
+    y_min = -90, -- 30
     decoration = "livingcaves:rootdirt2"
 
 })
