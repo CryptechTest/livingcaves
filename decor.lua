@@ -175,7 +175,7 @@ minetest.register_node("livingcaves:moss", {
     flags = "place_center_x,place_center_z,force_placement,all_floors",
     y_max = -90,
     y_min = -700,
-    place_offset_y=-1,
+    place_offset_y=-0,
     schematic = minetest.get_modpath("livingcaves").."/schematics/livingcaves_lichycaverock.mts",
 	rotation = "random",
 })
@@ -209,12 +209,18 @@ minetest.register_node("livingcaves:hangingmoss", {
 	wield_image = "livingcaves_hangingmoss.png",
 	paramtype = "light",
 	sunlight_propagates = true,
-	walkable = false,
+	--walkable = false,
 	selection_box = {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16},
 	},
-	groups = {snappy = 3, flammable = 2},
+	node_box = {
+        type = 'fixed',
+        fixed = {
+            { -0.01, -0.0, -0.01, 0.01, 0.0, 0.01 },
+        }
+    },
+	groups = {snappy = 3, flammable = 2, attached_node = 4},
 	sounds = default.node_sound_leaves_defaults(),
 
 	after_dig_node = function(pos, node, metadata, digger)
@@ -236,7 +242,7 @@ minetest.register_node("livingcaves:hangingmossend", {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16},
 	},
-	groups = {snappy = 3, flammable = 2},
+	groups = {snappy = 3, flammable = 2, attached_node = 4},
 	sounds = default.node_sound_leaves_defaults(),
 
 	after_dig_node = function(pos, node, metadata, digger)
@@ -316,12 +322,18 @@ minetest.register_node("livingcaves:glowshroom", {
 	wield_image = "livingcaves_mushroom.png",
 	paramtype = "light",
 	sunlight_propagates = true,
-	walkable = false,
+	--walkable = false,
 	selection_box = {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16},
 	},
-	groups = {snappy = 3, flammable = 2},
+	node_box = {
+        type = 'fixed',
+        fixed = {
+            { -0.01, -0.0, -0.01, 0.01, 0.0, 0.01 },
+        }
+    },
+	groups = {snappy = 3, flammable = 2, attached_node = 3},
 	sounds = default.node_sound_leaves_defaults(),
 
 	after_dig_node = function(pos, node, metadata, digger)
@@ -344,7 +356,7 @@ minetest.register_node("livingcaves:glowshroom_top", {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16},
 	},
-	groups = {snappy = 3, flammable = 2},
+	groups = {snappy = 3, flammable = 2, attached_node = 3},
 	sounds = default.node_sound_leaves_defaults(),
 
 	after_dig_node = function(pos, node, metadata, digger)
@@ -462,7 +474,7 @@ minetest.register_node("livingcaves:stalagmiteend", {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16},
 	},
-	groups = {cracky = 3, stone = 1},
+	groups = {cracky = 3, stone = 1, attached_node = 3},
 	sounds = default.node_sound_stone_defaults(),
 
 	after_dig_node = function(pos, node, metadata, digger)
@@ -552,7 +564,7 @@ minetest.register_node("livingcaves:stalagtitelargeend", {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16},
 	},
-	groups = {cracky = 3, stone = 1},
+	groups = {cracky = 3, stone = 1, attached_node = 3},
 	sounds = default.node_sound_stone_defaults(),
 
 	after_dig_node = function(pos, node, metadata, digger)
@@ -1362,7 +1374,7 @@ minetest.register_node("livingcaves:mushroom_edible", {
   paramtype = "light",
   on_use = minetest.item_eat(5),
   is_ground_content = false,
-  groups = {food = 1, snappy = 3, leafdecay = 3, flammable = 2},
+  groups = {food = 1, snappy = 3, leafdecay = 3, flammable = 2, attached_node = 3},
   drop = {
     max_items = 1,
     items = {
@@ -1451,7 +1463,7 @@ minetest.register_node("livingcaves:rootcave_hangingroot", {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16},
 	},
-	groups = {snappy = 3, flammable = 2},
+	groups = {snappy = 3, flammable = 2, attached_node = 4},
 	sounds = default.node_sound_leaves_defaults(),
 
 	after_dig_node = function(pos, node, metadata, digger)
@@ -1473,7 +1485,7 @@ minetest.register_node("livingcaves:rootcave_hangingroot2", {
 		type = "fixed",
 		fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16},
 	},
-	groups = {snappy = 3, flammable = 2},
+	groups = {snappy = 3, flammable = 2, attached_node = 4},
 	sounds = default.node_sound_leaves_defaults(),
 
 	after_dig_node = function(pos, node, metadata, digger)
