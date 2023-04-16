@@ -7,6 +7,7 @@ if minetest.get_modpath("hunger_ng") ~= nil then
 		satiates = 3.0,
 	})
 	hunger_ng.add_hunger_data('livingcaves:glowshroom5_top', {
-		satiates = 1.5,
+		satiates = 1.0,
+		heals = 1.0,
 	})
 end
