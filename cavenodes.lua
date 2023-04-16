@@ -172,21 +172,14 @@ minetest.register_decoration({
     deco_type = "simple",
     place_on = {"default:stone"},
     is_ground_content = true,
-    sidelen = 8,
+    sidelen = 4,
     place_offset_y = -1,
-    fill_ratio = 16,
+    fill_ratio = 8,
+	biomes = { "caves_mossy", "caves_mossy2", "caves_mossy3", "coniferous_forest_under", "rainforest", "rainforest_ocean", "rainforest_under", "taiga_ocean", "grassland_ocean", "savanna_under", "deciduous_forest_under" },
     flags = "force_placement,all_floors",
-    y_max = -40,
-    y_min = -700, -- 90
+    y_max = -30,
+    y_min = -3000, -- 90
     decoration = "livingcaves:mushcave_bottom",
-	noise_params = {
-		offset = 0,
-		scale = 8,
-		spread = {x=4, y=8, z=4},
-		seed = 192,
-		octaves = 2,
-		persist = 0.6
-	},
 
 })
 
@@ -194,66 +187,45 @@ minetest.register_decoration({
     deco_type = "simple",
     place_on = {"default:stone"},
     is_ground_content = true,
-    sidelen = 8,
+    sidelen = 4,
     place_offset_y = -1,
-    fill_ratio = 16,
+    fill_ratio = 8,
+	biomes = { "caves_mossy", "caves_mossy2", "caves_mossy3", "coniferous_forest_under", "rainforest", "rainforest_ocean", "rainforest_under", "taiga_ocean", "grassland_ocean", "savanna_under", "deciduous_forest_under" },
     flags = "force_placement,all_ceilings",
-    y_max = -40,
-    y_min = -700, -- 90
+    y_max = -30,
+    y_min = -3000, -- 90
     decoration = "livingcaves:mushcave_bottom2",
-	noise_params = {
-		offset = 0,
-		scale = 8,
-		spread = {x=4, y=8, z=4},
-		seed = 192,
-		octaves = 2,
-		persist = 0.6
-	},
 
 })
 
 -- lower
 minetest.register_decoration({
     deco_type = "simple",
-    place_on = {"default:stone"},
+    place_on = {"default:stone", "default:sandstone", "default:desert_stone"},
     is_ground_content = true,
-    sidelen = 8,
+    sidelen = 2,
     place_offset_y = -1,
-    fill_ratio = 16,
+    fill_ratio = 5,
+	biomes = { "caves_drippy", "caves_drippy2", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under" },
     flags = "force_placement,all_floors",
-    y_max = -600, -- 90
+    y_max = -60, -- 90
     y_min = -11000, -- 200
     decoration = "livingcaves:dripstonecave_bottom",
-	noise_params = {
-		offset = 0.2,
-		scale = 5,
-		spread = {x=8, y=16, z=8},
-		seed = 256,
-		octaves = 2,
-		persist = 0.6
-	},
 
 })
 
 minetest.register_decoration({
     deco_type = "simple",
-    place_on = {"default:stone"},
+    place_on = {"default:stone", "default:sandstone", "default:desert_stone"},
     is_ground_content = true,
-    sidelen = 8,
+    sidelen = 2,
     place_offset_y = -1,
-    fill_ratio = 16,
+    fill_ratio = 4,
+	biomes = { "caves_drippy", "caves_drippy2", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under" },
     flags = "force_placement,all_ceilings",
-    y_max = -600,-- 90
+    y_max = -60,-- 90
     y_min = -11000, -- 200
     decoration = "livingcaves:dripstonecave_bottom2",
-	noise_params = {
-		offset = 0.2,
-		scale = 5,
-		spread = {x=8, y=16, z=8},
-		seed = 256,
-		octaves = 2,
-		persist = 0.6
-	},
 
 })
 
@@ -264,20 +236,12 @@ minetest.register_decoration({
     is_ground_content = true,
     sidelen = 8,
     place_offset_y = -1,
-    fill_ratio = 48,
+    fill_ratio = 5,
+	biomes = { "caves_bacterial", "caves_bacterial2", "caves_bacterial3", "rainforest_under" },
     flags = "force_placement,all_floors",
-    y_max = -5000,
+    y_max = -2000,
     y_min = -11000,
     decoration = "livingcaves:bacteriacave_bottom",
-	noise_params = {
-		offset = 0.5,
-		scale = 2,
-		spread = {x=40, y=32, z=40},
-		seed = 1024,
-		octaves = 2,
-		persist = 0.6
-	},
-
 })
 
 minetest.register_decoration({
@@ -286,22 +250,16 @@ minetest.register_decoration({
     is_ground_content = true,
     sidelen = 8,
     place_offset_y = -1,
-    fill_ratio = 32,
+    fill_ratio = 4,
+	biomes = { "caves_bacterial", "caves_bacterial2", "caves_bacterial3", "rainforest_under" },
     flags = "force_placement,all_ceilings",
-    y_max = -5000,
+    y_max = -2000,
     y_min = -11000,
     decoration = "livingcaves:bacteriacave_bottom2",
-	noise_params = {
-		offset = 0.5,
-		scale = 2,
-		spread = {x=48, y=32, z=48},
-		seed = 1024,
-		octaves = 2,
-		persist = 0.6
-	},
 
 })
 
+-- ice
 minetest.register_decoration({
     deco_type = "simple",
     place_on = {"default:stone"},
@@ -311,8 +269,8 @@ minetest.register_decoration({
     fill_ratio = 8,
     biomes = {"snowy_grassland", "icesheet_under", "icesheet", "snowy_grassland_under", "tundra_highland", "tundra_beach", "tundra_under", "taiga", "taiga_under", "livingfloatlands:coldsteppe"},
     flags = "force_placement,all_floors",
-    y_max = -1,
-    y_min = -90, -- 30
+    y_max = 10,
+    y_min = -190, -- 30
     decoration = "livingcaves:icecave_ice"
 
 })
@@ -326,12 +284,13 @@ minetest.register_decoration({
     fill_ratio = 8,
     biomes = {"snowy_grassland", "icesheet_under", "icesheet", "snowy_grassland_under", "tundra_highland", "tundra_beach", "tundra_under", "taiga", "taiga_under", "livingfloatlands:coldsteppe"},
     flags = "force_placement,all_ceilings",
-    y_max = -1,
-    y_min = -90, -- 30
+    y_max = 10,
+    y_min = -190, -- 30
     decoration = "livingcaves:icecave_ice2"
 
 })
 
+-- roots
 minetest.register_decoration({
     deco_type = "simple",
     place_on = {"default:stone"},
