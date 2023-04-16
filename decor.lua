@@ -179,12 +179,12 @@ minetest.register_decoration({
 minetest.register_decoration({
     name = "livingcaves:moss",
     deco_type = "simple",
-    place_on = {"livingcaves:mushcave_bottom"},
+    place_on = {"livingcaves:mushcave_bottom", "livingcaves:mushcave2_bottom"},
     sidelen = 16,
     fill_ratio = 0.085,
     flags = "all_floors",
     y_max = -30,
-    y_min = -3000,
+    y_min = -6000,
     decoration = "livingcaves:moss"
 })
 
@@ -217,7 +217,7 @@ minetest.register_node("livingcaves:moss", {
 
 minetest.register_decoration({
     deco_type = "schematic",
-    place_on = {"livingcaves:mushcave_bottom"},
+    place_on = {"livingcaves:mushcave_bottom", "livingcaves:mushcave2_bottom"},
     sidelen = 16,
     noise_params = {
         offset = -0.1,
@@ -233,7 +233,7 @@ minetest.register_decoration({
     },
     flags = "place_center_x,place_center_z,force_placement,all_floors",
     y_max = -30,
-    y_min = -3000,
+    y_min = -6000,
     place_offset_y = -0,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_lichycaverock.mts",
     rotation = "random"
@@ -375,36 +375,36 @@ minetest.register_node("livingcaves:hangingmossend", {
 
 minetest.register_decoration({
     deco_type = "schematic",
-    place_on = {"livingcaves:mushcave_bottom2"},
+    place_on = {"livingcaves:mushcave_bottom2", "livingcaves:mushcave2_ceiling"},
     sidelen = 16,
     fill_ratio = 0.09,
     flags = "place_center_x,place_center_z,force_placement,all_ceilings",
     y_max = -30,
-    y_min = -3000,
+    y_min = -6000,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_hangingmoss.mts",
     rotation = "random"
 })
 
 minetest.register_decoration({
     deco_type = "schematic",
-    place_on = {"livingcaves:mushcave_bottom2"},
+    place_on = {"livingcaves:mushcave_bottom2", "livingcaves:mushcave2_ceiling"},
     sidelen = 16,
     fill_ratio = 0.08,
     flags = "place_center_x,place_center_z,force_placement,all_ceilings",
     y_max = -30,
-    y_min = -3000,
+    y_min = -6000,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_hangingmoss2.mts",
     rotation = "random"
 })
 
 minetest.register_decoration({
     deco_type = "schematic",
-    place_on = {"livingcaves:mushcave_bottom2"},
+    place_on = {"livingcaves:mushcave_bottom2", "livingcaves:mushcave2_ceiling"},
     sidelen = 16,
     fill_ratio = 0.06,
     flags = "place_center_x,place_center_z,force_placement,all_ceilings",
     y_max = -30,
-    y_min = -3000,
+    y_min = -6000,
     place_offset_y = -1,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_hangingmoss3.mts",
     rotation = "random"
@@ -412,12 +412,12 @@ minetest.register_decoration({
 
 minetest.register_decoration({
     deco_type = "schematic",
-    place_on = {"livingcaves:mushcave_bottom2"},
+    place_on = {"livingcaves:mushcave_bottom2", "livingcaves:mushcave2_ceiling"},
     sidelen = 16,
     fill_ratio = 0.03,
     flags = "place_center_x,place_center_z,force_placement,all_ceilings",
     y_max = -30,
-    y_min = -3000,
+    y_min = -6000,
     place_offset_y = -1,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_hangingmoss4.mts",
     rotation = "random"
@@ -425,12 +425,12 @@ minetest.register_decoration({
 
 minetest.register_decoration({
     deco_type = "schematic",
-    place_on = {"livingcaves:mushcave_bottom2"},
+    place_on = {"livingcaves:mushcave_bottom2", "livingcaves:mushcave2_ceiling"},
     sidelen = 16,
     fill_ratio = 0.01,
     flags = "place_center_x,place_center_z,force_placement,all_ceilings",
     y_max = -30,
-    y_min = -3000,
+    y_min = -6000,
     place_offset_y = -1,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_hangingmoss5.mts",
     rotation = "random"
@@ -548,7 +548,7 @@ minetest.register_node("livingcaves:hangingmossend2", {
 
 minetest.register_decoration({
     deco_type = "schematic",
-    place_on = {"livingcaves:mushcave_bottom2"},
+    place_on = {"livingcaves:mushcave_bottom2", "livingcaves:mushcave2_ceiling"},
     sidelen = 16,
     noise_params = {
         offset = -0.1,
@@ -564,7 +564,7 @@ minetest.register_decoration({
     },
     flags = "place_center_x,place_center_z,force_placement,all_ceilings",
     y_max = -300,
-    y_min = -3000,
+    y_min = -6000,
     --place_offset_y = -1,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_hangingmoss_b1.mts",
     rotation = "random"
@@ -572,7 +572,7 @@ minetest.register_decoration({
 
 minetest.register_decoration({
     deco_type = "schematic",
-    place_on = {"livingcaves:mushcave_bottom2"},
+    place_on = {"livingcaves:mushcave_bottom2", "livingcaves:mushcave2_ceiling"},
     sidelen = 16,
     noise_params = {
         offset = -0.1,
@@ -588,7 +588,7 @@ minetest.register_decoration({
     },
     flags = "place_center_x,place_center_z,force_placement,all_ceilings",
     y_max = -300,
-    y_min = -3000,
+    y_min = -6000,
     --place_offset_y = -1,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_hangingmoss_b2.mts",
     rotation = "random"
@@ -596,7 +596,7 @@ minetest.register_decoration({
 
 minetest.register_decoration({
     deco_type = "schematic",
-    place_on = {"livingcaves:mushcave_bottom2"},
+    place_on = {"livingcaves:mushcave_bottom2", "livingcaves:mushcave2_ceiling"},
     sidelen = 16,
     noise_params = {
         offset = -0.1,
@@ -612,7 +612,7 @@ minetest.register_decoration({
     },
     flags = "place_center_x,place_center_z,force_placement,all_ceilings",
     y_max = -300,
-    y_min = -3000,
+    y_min = -6000,
     --place_offset_y = -1,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_hangingmoss_b3.mts",
     rotation = "random"
@@ -620,7 +620,7 @@ minetest.register_decoration({
 
 minetest.register_decoration({
     deco_type = "schematic",
-    place_on = {"livingcaves:mushcave_bottom2"},
+    place_on = {"livingcaves:mushcave_bottom2", "livingcaves:mushcave2_ceiling"},
     sidelen = 16,
     noise_params = {
         offset = -0.1,
@@ -636,7 +636,7 @@ minetest.register_decoration({
     },
     flags = "place_center_x,place_center_z,force_placement,all_ceilings",
     y_max = -300,
-    y_min = -3000,
+    y_min = -6000,
     --place_offset_y = -1,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_hangingmoss_b4.mts",
     rotation = "random"
@@ -644,7 +644,7 @@ minetest.register_decoration({
 
 minetest.register_decoration({
     deco_type = "schematic",
-    place_on = {"livingcaves:mushcave_bottom2"},
+    place_on = {"livingcaves:mushcave_bottom2", "livingcaves:mushcave2_ceiling"},
     sidelen = 16,
     noise_params = {
         offset = -0.1,
@@ -660,7 +660,7 @@ minetest.register_decoration({
     },
     flags = "place_center_x,place_center_z,force_placement,all_ceilings",
     y_max = -300,
-    y_min = -3000,
+    y_min = -6000,
     --place_offset_y = -1,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_hangingmoss_b5.mts",
     rotation = "random"
@@ -730,7 +730,7 @@ minetest.register_decoration({
     fill_ratio = 0.06,
     flags = "place_center_x,place_center_z,force_placement,all_floors",
     y_max = -30,
-    y_min = -3000,
+    y_min = -6000,
     place_offset_y = -0,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_glowshroom.mts",
     rotation = "random",
@@ -744,7 +744,7 @@ minetest.register_decoration({
     fill_ratio = 0.06,
     flags = "place_center_x,place_center_z,force_placement,all_floors",
     y_max = -30,
-    y_min = -3000,
+    y_min = -6000,
     place_offset_y = -0,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_glowshroom2.mts",
     rotation = "random",
@@ -809,6 +809,64 @@ minetest.register_node("livingcaves:glowshroom4_top", {
     end
 })
 
+
+minetest.register_node("livingcaves:glowshroom5", {
+    description = S("Glowing Mushroom Stem Gold"),
+    drawtype = "plantlike",
+    waving = 0,
+    tiles = {"livingcaves_mushroom5.png"},
+    inventory_image = "livingcaves_mushroom5.png",
+    wield_image = "livingcaves_mushroom5.png",
+    paramtype = "light",
+    sunlight_propagates = true,
+    -- walkable = false,
+    selection_box = {
+        type = "fixed",
+        fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16}
+    },
+    node_box = {
+        type = 'fixed',
+        fixed = {{-0.00, -0.0, -0.00, 0.00, 0.0, 0.00}}
+    },
+    groups = {
+        snappy = 3,
+        flammable = 2,
+        attached_node = 3
+    },
+    sounds = default.node_sound_leaves_defaults(),
+
+    after_dig_node = function(pos, node, metadata, digger)
+        default.dig_up(pos, node, digger)
+    end
+})
+
+minetest.register_node("livingcaves:glowshroom5_top", {
+    description = S("Glowing Mushroom Hat Gold"),
+    drawtype = "plantlike",
+    waving = 0,
+    light_source = 8,
+    tiles = {"livingcaves_mushroom5_top.png"},
+    inventory_image = "livingcaves_mushroom5_top.png",
+    wield_image = "livingcaves_mushroom5_top.png",
+    paramtype = "light",
+    sunlight_propagates = true,
+    walkable = false,
+    selection_box = {
+        type = "fixed",
+        fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16}
+    },
+    groups = {
+        snappy = 3,
+        flammable = 2,
+        attached_node = 3
+    },
+    sounds = default.node_sound_leaves_defaults(),
+
+    after_dig_node = function(pos, node, metadata, digger)
+        default.dig_up(pos, node, digger)
+    end
+})
+
 minetest.register_decoration({
     deco_type = "schematic",
     place_on = {"livingcaves:mushcave_bottom"},
@@ -825,44 +883,72 @@ minetest.register_decoration({
 
 minetest.register_decoration({
     deco_type = "schematic",
-    place_on = {"livingcaves:mushcave_bottom"},
+    place_on = {"livingcaves:mushcave_bottom", "livingcaves:mushcave2_bottom"},
     sidelen = 16,
     fill_ratio = 0.03,
     flags = "place_center_x,place_center_z,force_placement,all_floors",
     y_max = -30,
-    y_min = -3000,
+    y_min = -6000,
     place_offset_y = 1,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_glowshroom3.mts",
     rotation = "random",
-    biomes = {"caves_mossy3"}
+    biomes = {"caves_mossy3", "caves_fungi"}
 })
 
 minetest.register_decoration({
     deco_type = "schematic",
-    place_on = {"livingcaves:mushcave_bottom"},
+    place_on = {"livingcaves:mushcave_bottom", "livingcaves:mushcave2_bottom"},
     sidelen = 16,
     fill_ratio = 0.03,
     flags = "place_center_x,place_center_z,force_placement,all_floors",
     y_max = -30,
-    y_min = -3000,
+    y_min = -6000,
     place_offset_y = 1,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_glowshroom4.mts",
     rotation = "random",
-    biomes = {"caves_mossy3"}
+    biomes = {"caves_mossy3", "caves_fungi"}
 })
 
 minetest.register_decoration({
     deco_type = "schematic",
-    place_on = {"livingcaves:mushcave_bottom"},
+    place_on = {"livingcaves:mushcave_bottom", "livingcaves:mushcave2_bottom"},
     sidelen = 16,
     fill_ratio = 0.016,
     flags = "place_center_x,place_center_z,force_placement,all_floors",
     y_max = -30,
-    y_min = -3000,
+    y_min = -6000,
     place_offset_y = 1,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_glowshroom5.mts",
     rotation = "random",
-    biomes = {"caves_mossy3"}
+    biomes = {"caves_mossy3", "caves_fungi"}
+})
+
+minetest.register_decoration({
+    deco_type = "schematic",
+    place_on = {"livingcaves:mushcave2_bottom"},
+    sidelen = 16,
+    fill_ratio = 0.025,
+    flags = "place_center_x,place_center_z,force_placement,all_floors",
+    y_max = -30,
+    y_min = -6000,
+    place_offset_y = 1,
+    schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_glowshroom6.mts",
+    rotation = "random",
+    biomes = {"caves_fungi"}
+})
+
+minetest.register_decoration({
+    deco_type = "schematic",
+    place_on = {"livingcaves:mushcave2_bottom"},
+    sidelen = 16,
+    fill_ratio = 0.01,
+    flags = "place_center_x,place_center_z,force_placement,all_floors",
+    y_max = -30,
+    y_min = -6000,
+    place_offset_y = 1,
+    schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_glowshroom7.mts",
+    rotation = "random",
+    biomes = {"caves_fungi"}
 })
 
 --- dripstone cave
@@ -1091,10 +1177,11 @@ minetest.register_decoration({
     },
     flags = "place_center_x,place_center_z,force_placement,all_floors",
     place_offset_y = -2,
-    y_max = -2500,
+    y_max = -500,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_pool1.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1115,10 +1202,11 @@ minetest.register_decoration({
     },
     flags = "place_center_x,place_center_z,force_placement,all_floors",
     place_offset_y = -2,
-    y_max = -2500,
+    y_max = -1500,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_pool2.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1139,10 +1227,11 @@ minetest.register_decoration({
     },
     flags = "place_center_x,place_center_z,force_placement,all_floors",
     place_offset_y = -3,
-    y_max = -2500,
+    y_max = -2000,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_pool3.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1155,7 +1244,8 @@ minetest.register_decoration({
     y_max = -60,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_largestalagmitegroup.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1168,7 +1258,8 @@ minetest.register_decoration({
     y_max = -60,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_largestalagmitegroup2.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1181,7 +1272,8 @@ minetest.register_decoration({
     y_max = -60,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_largestalagtitegroup.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1194,7 +1286,8 @@ minetest.register_decoration({
     y_max = -60,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_largestalagtitegroup2.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1207,7 +1300,8 @@ minetest.register_decoration({
     y_max = -60,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_stalagmite.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1220,7 +1314,8 @@ minetest.register_decoration({
     y_max = -60,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_stalagmite2.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1233,7 +1328,8 @@ minetest.register_decoration({
     y_max = -60,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_stalagmite3.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1246,7 +1342,8 @@ minetest.register_decoration({
     y_max = -60,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_stalagmitesmall.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "caves_dripped", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1259,7 +1356,8 @@ minetest.register_decoration({
     y_max = -60,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_stalagmitesmall2.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "caves_dripped", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1272,7 +1370,8 @@ minetest.register_decoration({
     y_max = -60,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_stalagmitesmall3.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "caves_dripped", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1285,7 +1384,8 @@ minetest.register_decoration({
     y_max = -60,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_stalagtite.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "caves_dripped", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1298,7 +1398,8 @@ minetest.register_decoration({
     y_max = -60,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_stalagtite2.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1311,7 +1412,8 @@ minetest.register_decoration({
     y_max = -60,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_stalagtite3.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1324,7 +1426,8 @@ minetest.register_decoration({
     y_max = -60,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_stalagtitesmall.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "caves_dripped", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1337,7 +1440,8 @@ minetest.register_decoration({
     y_max = -60,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_stalagtitesmall2.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "caves_dripped", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_decoration({
@@ -1350,7 +1454,8 @@ minetest.register_decoration({
     y_max = -60,
     y_min = -10990,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_stalagtitesmall3.mts",
-    rotation = "random"
+    rotation = "random",
+    biomes = {"caves_drippy", "caves_drippy2", "caves_drippy3", "caves_dripped", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under"}
 })
 
 minetest.register_node("livingcaves:water_source", {

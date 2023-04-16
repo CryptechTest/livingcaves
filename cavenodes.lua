@@ -42,6 +42,24 @@ minetest.register_node("livingcaves:mushcave_bottom2", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
+minetest.register_node("livingcaves:mushcave2_bottom", {
+	description = S("Mycelium Infested Rock"),
+	tiles = {"livingcaves_mushcave_bottom.png^[colorize:#1734d430"},
+	groups = {cracky = 3, stone = 1},
+	drop = "livingcaves:mushcave2_bottom",
+	legacy_mineral = true,
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_node("livingcaves:mushcave2_ceiling", {
+	description = S("Mycelium Infested Rock"),
+	tiles = {"livingcaves_mushcave_bottom2.png^[colorize:#1734d430"},
+	groups = {cracky = 3, stone = 1},
+	drop = "livingcaves:mushcave2_ceiling",
+	legacy_mineral = true,
+	sounds = default.node_sound_stone_defaults(),
+})
+
 minetest.register_node("livingcaves:dripstonecave_bottom", {
 	description = S("Dripstone Cave Stone"),
 	tiles = {"livingcaves_dripstonecave_bottom.png"},
@@ -167,7 +185,7 @@ minetest.register_node("livingcaves:bacteriacave_nest", {
 	sounds = default.node_sound_stone_defaults(),
 })
 
--- mid
+-- mossy
 minetest.register_decoration({
     deco_type = "simple",
     place_on = {"default:stone"},
@@ -178,7 +196,7 @@ minetest.register_decoration({
 	biomes = { "caves_mossy", "caves_mossy2", "caves_mossy3", "coniferous_forest_under", "rainforest", "rainforest_ocean", "rainforest_under", "taiga_ocean", "grassland_ocean", "savanna_under", "deciduous_forest_under" },
     flags = "force_placement,all_floors",
     y_max = -30,
-    y_min = -3000, -- 90
+    y_min = -6000, -- 90
     decoration = "livingcaves:mushcave_bottom",
 
 })
@@ -193,12 +211,43 @@ minetest.register_decoration({
 	biomes = { "caves_mossy", "caves_mossy2", "caves_mossy3", "coniferous_forest_under", "rainforest", "rainforest_ocean", "rainforest_under", "taiga_ocean", "grassland_ocean", "savanna_under", "deciduous_forest_under" },
     flags = "force_placement,all_ceilings",
     y_max = -30,
-    y_min = -3000, -- 90
+    y_min = -6000, -- 90
     decoration = "livingcaves:mushcave_bottom2",
 
 })
 
--- lower
+-- mossy2
+minetest.register_decoration({
+    deco_type = "simple",
+    place_on = {"default:stone"},
+    is_ground_content = true,
+    sidelen = 4,
+    place_offset_y = -1,
+    fill_ratio = 8,
+	biomes = { "caves_fungi" },
+    flags = "force_placement,all_floors",
+    y_max = -30,
+    y_min = -6000, -- 90
+    decoration = "livingcaves:mushcave2_bottom",
+
+})
+
+minetest.register_decoration({
+    deco_type = "simple",
+    place_on = {"default:stone"},
+    is_ground_content = true,
+    sidelen = 4,
+    place_offset_y = -1,
+    fill_ratio = 8,
+	biomes = { "caves_fungi"},
+    flags = "force_placement,all_ceilings",
+    y_max = -30,
+    y_min = -6000, -- 90
+    decoration = "livingcaves:mushcave2_ceiling",
+
+})
+
+-- drippy
 minetest.register_decoration({
     deco_type = "simple",
     place_on = {"default:stone", "default:sandstone", "default:desert_stone"},
@@ -206,7 +255,7 @@ minetest.register_decoration({
     sidelen = 2,
     place_offset_y = -1,
     fill_ratio = 5,
-	biomes = { "caves_drippy", "caves_drippy2", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under" },
+	biomes = { "caves_drippy", "caves_drippy2", "caves_drippy3", "caves_dripped", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under" },
     flags = "force_placement,all_floors",
     y_max = -60, -- 90
     y_min = -11000, -- 200
@@ -221,7 +270,7 @@ minetest.register_decoration({
     sidelen = 2,
     place_offset_y = -1,
     fill_ratio = 4,
-	biomes = { "caves_drippy", "caves_drippy2", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under" },
+	biomes = { "caves_drippy", "caves_drippy2", "caves_drippy3", "caves_dripped", "coniferous_forest_ocean", "grassland_ocean", "snowy_grassland_ocean", "deciduous_forest_ocean", "savanna_ocean", "desert_ocean", "taiga_ocean", "snowy_grassland_ocean", "sandstone_desert_ocean", "cold_desert_ocean", "cold_desert_under" },
     flags = "force_placement,all_ceilings",
     y_max = -60,-- 90
     y_min = -11000, -- 200
@@ -229,7 +278,7 @@ minetest.register_decoration({
 
 })
 
--- deep
+-- bacterial
 minetest.register_decoration({
     deco_type = "simple",
     place_on = {"default:stone"},
