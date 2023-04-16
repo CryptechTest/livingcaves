@@ -9,7 +9,7 @@ local mg_name = minetest.get_mapgen_setting("mg_name")
 minetest.register_node("livingcaves:mossycaverock", {
 	description = S("Mossy Cave Rock"),
 	tiles = {"livingcaves_mossycaverock.png"},
-	groups = {cracky = 3, stone = 1},
+	groups = {cracky = 3, stone = 1, mushy_rock = 1},
 	drop = "livingcaves:mossycaverock",
 	legacy_mineral = true,
 	sounds = default.node_sound_stone_defaults(),
@@ -18,7 +18,7 @@ minetest.register_node("livingcaves:mossycaverock", {
 minetest.register_node("livingcaves:lichycaverock", {
 	description = S("Lichen infested Cave Rock"),
 	tiles = {"livingcaves_lichyrock.png"},
-	groups = {cracky = 3, stone = 1},
+	groups = {cracky = 3, stone = 1, mushy_rock = 1},
 	drop = "livingcaves:lichycaverock",
 	legacy_mineral = true,
 	sounds = default.node_sound_stone_defaults(),
@@ -27,7 +27,7 @@ minetest.register_node("livingcaves:lichycaverock", {
 minetest.register_node("livingcaves:mushcave_bottom", {
 	description = S("Mushroom Infested Rock"),
 	tiles = {"livingcaves_mushcave_bottom.png"},
-	groups = {cracky = 3, stone = 1},
+	groups = {cracky = 3, stone = 1, mushy_rock = 1},
 	drop = "livingcaves:mushcave_bottom",
 	legacy_mineral = true,
 	sounds = default.node_sound_stone_defaults(),
@@ -36,7 +36,7 @@ minetest.register_node("livingcaves:mushcave_bottom", {
 minetest.register_node("livingcaves:mushcave_bottom2", {
 	description = S("Mushroom Infested Rock"),
 	tiles = {"livingcaves_mushcave_bottom2.png"},
-	groups = {cracky = 3, stone = 1},
+	groups = {cracky = 3, stone = 1, mushy_rock = 1},
 	drop = "livingcaves:mushcave_bottom2",
 	legacy_mineral = true,
 	sounds = default.node_sound_stone_defaults(),
@@ -45,7 +45,7 @@ minetest.register_node("livingcaves:mushcave_bottom2", {
 minetest.register_node("livingcaves:mushcave2_bottom", {
 	description = S("Mycelium Infested Rock"),
 	tiles = {"livingcaves_mushcave_bottom.png^[colorize:#1734d430"},
-	groups = {cracky = 3, stone = 1},
+	groups = {cracky = 3, stone = 1, mushy_rock = 1},
 	drop = "livingcaves:mushcave2_bottom",
 	legacy_mineral = true,
 	sounds = default.node_sound_stone_defaults(),
@@ -54,7 +54,7 @@ minetest.register_node("livingcaves:mushcave2_bottom", {
 minetest.register_node("livingcaves:mushcave2_ceiling", {
 	description = S("Mycelium Infested Rock"),
 	tiles = {"livingcaves_mushcave_bottom2.png^[colorize:#1734d430"},
-	groups = {cracky = 3, stone = 1},
+	groups = {cracky = 3, stone = 1, mushy_rock = 1},
 	drop = "livingcaves:mushcave2_ceiling",
 	legacy_mineral = true,
 	sounds = default.node_sound_stone_defaults(),

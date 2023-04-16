@@ -398,7 +398,7 @@ minetest.register_craft({
 	output = "livingcaves:mushcave_mossybricks",
 	type = "shapeless",
 	recipe = 
-		{"livingcaves:mushcave_bottom", "livingcaves:mushcave_bottom"}
+		{"group:mushy_rock", "group:mushy_rock"}
 
 	
 })
@@ -446,23 +446,7 @@ minetest.register_craft({
 	output = "livingcaves:healingsoup",
 type = "shapeless",
 	recipe = 
-		{"livingcaves:lichen", "livingcaves:glowshroom_top", "livingcaves:mushroom_edible", "livingcaves:bucket_cavewater"}
-
-})
-
-minetest.register_craft({
-	output = "livingcaves:healingsoup",
-type = "shapeless",
-	recipe = 
-		{"livingcaves:lichen", "livingcaves:glowshroom2_top", "livingcaves:mushroom_edible", "livingcaves:bucket_cavewater"}
-
-})
-
-minetest.register_craft({
-	output = "livingcaves:healingsoup",
-type = "shapeless",
-	recipe = 
-		{"livingcaves:lichen", "livingcaves:glowshroom3_top", "livingcaves:mushroom_edible", "livingcaves:bucket_cavewater"}
+		{"livingcaves:lichen", "group:glow_shroom", "livingcaves:mushroom_edible", "livingcaves:bucket_cavewater"}
 
 })
 

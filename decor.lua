@@ -206,7 +206,8 @@ minetest.register_node("livingcaves:moss", {
         flora = 1,
         attached_node = 1,
         flammable = 1,
-        beautiflowers = 1
+        beautiflowers = 1,
+        compost = 55
     },
     sounds = default.node_sound_leaves_defaults(),
     selection_box = {
@@ -257,7 +258,8 @@ minetest.register_node("livingcaves:lichen", {
         flora = 1,
         attached_node = 1,
         flammable = 1,
-        beautiflowers = 1
+        beautiflowers = 1,
+        compost = 40
     },
     sounds = default.node_sound_leaves_defaults(),
     selection_box = {
@@ -287,7 +289,8 @@ minetest.register_node("livingcaves:hangingmoss", {
     groups = {
         snappy = 3,
         flammable = 2,
-        attached_node = 4
+        attached_node = 4,
+        compost = 40
     },
     sounds = default.node_sound_leaves_defaults(),
     after_dig_node = function(pos, node, metadata, digger)
@@ -332,7 +335,8 @@ minetest.register_node("livingcaves:hangingmossend", {
     groups = {
         snappy = 3,
         flammable = 2,
-        attached_node = 4
+        attached_node = 4,
+        compost = 40
     },
     sounds = default.node_sound_leaves_defaults(),
     after_dig_node = function(pos, node, metadata, digger)
@@ -459,7 +463,8 @@ minetest.register_node("livingcaves:hangingmoss2", {
     groups = {
         snappy = 3,
         flammable = 2,
-        attached_node = 4
+        attached_node = 4,
+        compost = 45
     },
     sounds = default.node_sound_leaves_defaults(),
     after_dig_node = function(pos, node, metadata, digger)
@@ -505,7 +510,8 @@ minetest.register_node("livingcaves:hangingmossend2", {
     groups = {
         snappy = 3,
         flammable = 2,
-        attached_node = 4
+        attached_node = 4,
+        compost = 45
     },
     sounds = default.node_sound_leaves_defaults(),
     after_dig_node = function(pos, node, metadata, digger)
@@ -687,7 +693,8 @@ minetest.register_node("livingcaves:glowshroom", {
     groups = {
         snappy = 3,
         flammable = 2,
-        attached_node = 3
+        attached_node = 3,
+        compost = 30
     },
     sounds = default.node_sound_leaves_defaults(),
 
@@ -714,7 +721,9 @@ minetest.register_node("livingcaves:glowshroom_top", {
     groups = {
         snappy = 3,
         flammable = 2,
-        attached_node = 3
+        attached_node = 3,
+        glow_shroom = 2,
+        compost = 60
     },
     sounds = default.node_sound_leaves_defaults(),
 
@@ -773,7 +782,8 @@ minetest.register_node("livingcaves:glowshroom4", {
     groups = {
         snappy = 3,
         flammable = 2,
-        attached_node = 3
+        attached_node = 3,
+        compost = 30
     },
     sounds = default.node_sound_leaves_defaults(),
 
@@ -800,7 +810,9 @@ minetest.register_node("livingcaves:glowshroom4_top", {
     groups = {
         snappy = 3,
         flammable = 2,
-        attached_node = 3
+        attached_node = 3,
+        glow_shroom = 2,
+        compost = 60
     },
     sounds = default.node_sound_leaves_defaults(),
 
@@ -831,7 +843,8 @@ minetest.register_node("livingcaves:glowshroom5", {
     groups = {
         snappy = 3,
         flammable = 2,
-        attached_node = 3
+        attached_node = 3,
+        compost = 30
     },
     sounds = default.node_sound_leaves_defaults(),
 
@@ -858,7 +871,9 @@ minetest.register_node("livingcaves:glowshroom5_top", {
     groups = {
         snappy = 3,
         flammable = 2,
-        attached_node = 3
+        attached_node = 3,
+        glow_shroom = 2,
+        compost = 65
     },
     sounds = default.node_sound_leaves_defaults(),
 
