@@ -278,13 +278,14 @@ minetest.register_node("livingcaves:hangingmoss", {
     paramtype = "light",
     sunlight_propagates = true,
     -- walkable = false,
+	climbable = true,
     selection_box = {
         type = "fixed",
         fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16}
     },
     node_box = {
         type = 'fixed',
-        fixed = {{-0.01, -0.0, -0.01, 0.01, 0.0, 0.01}}
+        fixed = {{-0.0, -0.0, -0.0, 0.0, 0.0, 0.0}}
     },
     groups = {
         snappy = 3,
@@ -324,13 +325,14 @@ minetest.register_node("livingcaves:hangingmossend", {
     paramtype = "light",
     sunlight_propagates = true,
     --walkable = false,
+	climbable = true,
     selection_box = {
         type = "fixed",
         fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16}
     },
     node_box = {
         type = 'fixed',
-        fixed = {{-0.01, -0.0, -0.01, 0.01, 0.0, 0.01}}
+        fixed = {{-0.0, -0.0, -0.0, 0.0, 0.0, 0.0}}
     },
     groups = {
         snappy = 3,
@@ -382,7 +384,7 @@ minetest.register_decoration({
     place_on = {"livingcaves:mushcave_bottom2", "livingcaves:mushcave2_ceiling"},
     sidelen = 16,
     fill_ratio = 0.09,
-    flags = "place_center_x,place_center_z,force_placement,all_ceilings",
+    flags = "place_center_x,place_center_z,all_ceilings",
     y_max = -30,
     y_min = -6000,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_hangingmoss.mts",
@@ -394,7 +396,7 @@ minetest.register_decoration({
     place_on = {"livingcaves:mushcave_bottom2", "livingcaves:mushcave2_ceiling"},
     sidelen = 16,
     fill_ratio = 0.08,
-    flags = "place_center_x,place_center_z,force_placement,all_ceilings",
+    flags = "place_center_x,place_center_z,all_ceilings",
     y_max = -30,
     y_min = -6000,
     schematic = minetest.get_modpath("livingcaves") .. "/schematics/livingcaves_hangingmoss2.mts",
@@ -406,7 +408,7 @@ minetest.register_decoration({
     place_on = {"livingcaves:mushcave_bottom2", "livingcaves:mushcave2_ceiling"},
     sidelen = 16,
     fill_ratio = 0.06,
-    flags = "place_center_x,place_center_z,force_placement,all_ceilings",
+    flags = "place_center_x,place_center_z,all_ceilings",
     y_max = -30,
     y_min = -6000,
     place_offset_y = -1,
@@ -419,7 +421,7 @@ minetest.register_decoration({
     place_on = {"livingcaves:mushcave_bottom2", "livingcaves:mushcave2_ceiling"},
     sidelen = 16,
     fill_ratio = 0.03,
-    flags = "place_center_x,place_center_z,force_placement,all_ceilings",
+    flags = "place_center_x,place_center_z,all_ceilings",
     y_max = -30,
     y_min = -6000,
     place_offset_y = -1,
@@ -432,7 +434,7 @@ minetest.register_decoration({
     place_on = {"livingcaves:mushcave_bottom2", "livingcaves:mushcave2_ceiling"},
     sidelen = 16,
     fill_ratio = 0.01,
-    flags = "place_center_x,place_center_z,force_placement,all_ceilings",
+    flags = "place_center_x,place_center_z,all_ceilings",
     y_max = -30,
     y_min = -6000,
     place_offset_y = -1,
@@ -452,13 +454,14 @@ minetest.register_node("livingcaves:hangingmoss2", {
     light_source = 7,
     sunlight_propagates = true,
     -- walkable = false,
+	climbable = true,
     selection_box = {
         type = "fixed",
         fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16}
     },
     node_box = {
         type = 'fixed',
-        fixed = {{-0.01, -0.0, -0.01, 0.01, 0.0, 0.01}}
+        fixed = {{-0.0, -0.0, -0.0, 0.0, 0.0, 0.0}}
     },
     groups = {
         snappy = 3,
@@ -498,14 +501,13 @@ minetest.register_node("livingcaves:hangingmossend2", {
     paramtype = "light",
     light_source = 5,
     sunlight_propagates = true,
-    --walkable = false,
     selection_box = {
         type = "fixed",
         fixed = {-6 / 16, -0.5, -6 / 16, 6 / 16, 0.5, 6 / 16}
     },
     node_box = {
         type = 'fixed',
-        fixed = {{-0.01, -0.0, -0.01, 0.01, 0.0, 0.01}}
+        fixed = {{-0.0, -0.0, -0.0, 0.0, 0.0, 0.0}}
     },
     groups = {
         snappy = 3,
@@ -568,7 +570,7 @@ minetest.register_decoration({
         octaves = 6,
         persist = 1
     },
-    flags = "place_center_x,place_center_z,force_placement,all_ceilings",
+    flags = "place_center_x,place_center_z,all_ceilings",
     y_max = -300,
     y_min = -6000,
     --place_offset_y = -1,
@@ -592,7 +594,7 @@ minetest.register_decoration({
         octaves = 6,
         persist = 1
     },
-    flags = "place_center_x,place_center_z,force_placement,all_ceilings",
+    flags = "place_center_x,place_center_z,all_ceilings",
     y_max = -300,
     y_min = -6000,
     --place_offset_y = -1,
@@ -616,7 +618,7 @@ minetest.register_decoration({
         octaves = 6,
         persist = 1
     },
-    flags = "place_center_x,place_center_z,force_placement,all_ceilings",
+    flags = "place_center_x,place_center_z,all_ceilings",
     y_max = -300,
     y_min = -6000,
     --place_offset_y = -1,
@@ -640,7 +642,7 @@ minetest.register_decoration({
         octaves = 6,
         persist = 1
     },
-    flags = "place_center_x,place_center_z,force_placement,all_ceilings",
+    flags = "place_center_x,place_center_z,all_ceilings",
     y_max = -300,
     y_min = -6000,
     --place_offset_y = -1,
@@ -664,7 +666,7 @@ minetest.register_decoration({
         octaves = 6,
         persist = 1
     },
-    flags = "place_center_x,place_center_z,force_placement,all_ceilings",
+    flags = "place_center_x,place_center_z,all_ceilings",
     y_max = -300,
     y_min = -6000,
     --place_offset_y = -1,
@@ -688,7 +690,7 @@ minetest.register_node("livingcaves:glowshroom", {
     },
     node_box = {
         type = 'fixed',
-        fixed = {{-0.01, -0.0, -0.01, 0.01, 0.0, 0.01}}
+        fixed = {{-0.0, -0.0, -0.0, 0.0, 0.0, 0.0}}
     },
     groups = {
         snappy = 3,
@@ -753,7 +755,7 @@ minetest.register_decoration({
     place_on = {"livingcaves:mushcave_bottom"},
     sidelen = 16,
     fill_ratio = 0.06,
-    flags = "place_center_x,place_center_z,force_placement,all_floors",
+    flags = "place_center_x,place_center_z,all_floors",
     y_max = -30,
     y_min = -6000,
     place_offset_y = -0,
@@ -779,7 +781,7 @@ minetest.register_node("livingcaves:glowshroom4", {
     },
     node_box = {
         type = 'fixed',
-        fixed = {{-0.01, -0.0, -0.01, 0.01, 0.0, 0.01}}
+        fixed = {{-0.0, -0.0, -0.0, 0.0, 0.0, 0.0}}
     },
     groups = {
         snappy = 3,
@@ -842,7 +844,7 @@ minetest.register_node("livingcaves:glowshroom5", {
     },
     node_box = {
         type = 'fixed',
-        fixed = {{-0.00, -0.0, -0.00, 0.00, 0.0, 0.00}}
+        fixed = {{-0.0, -0.0, -0.0, 0.0, 0.0, 0.0}}
     },
     groups = {
         snappy = 3,
@@ -907,7 +909,7 @@ minetest.register_decoration({
     place_on = {"livingcaves:mushcave_bottom", "livingcaves:mushcave2_bottom"},
     sidelen = 16,
     fill_ratio = 0.03,
-    flags = "place_center_x,place_center_z,force_placement,all_floors",
+    flags = "place_center_x,place_center_z,all_floors",
     y_max = -30,
     y_min = -6000,
     place_offset_y = 1,
@@ -921,7 +923,7 @@ minetest.register_decoration({
     place_on = {"livingcaves:mushcave_bottom", "livingcaves:mushcave2_bottom"},
     sidelen = 16,
     fill_ratio = 0.03,
-    flags = "place_center_x,place_center_z,force_placement,all_floors",
+    flags = "place_center_x,place_center_z,all_floors",
     y_max = -30,
     y_min = -6000,
     place_offset_y = 1,
@@ -935,7 +937,7 @@ minetest.register_decoration({
     place_on = {"livingcaves:mushcave_bottom", "livingcaves:mushcave2_bottom"},
     sidelen = 16,
     fill_ratio = 0.016,
-    flags = "place_center_x,place_center_z,force_placement,all_floors",
+    flags = "place_center_x,place_center_z,all_floors",
     y_max = -30,
     y_min = -6000,
     place_offset_y = 1,
@@ -949,7 +951,7 @@ minetest.register_decoration({
     place_on = {"livingcaves:mushcave2_bottom"},
     sidelen = 16,
     fill_ratio = 0.025,
-    flags = "place_center_x,place_center_z,force_placement,all_floors",
+    flags = "place_center_x,place_center_z,all_floors",
     y_max = -30,
     y_min = -6000,
     place_offset_y = 1,
@@ -963,7 +965,7 @@ minetest.register_decoration({
     place_on = {"livingcaves:mushcave2_bottom"},
     sidelen = 16,
     fill_ratio = 0.01,
-    flags = "place_center_x,place_center_z,force_placement,all_floors",
+    flags = "place_center_x,place_center_z,all_floors",
     y_max = -30,
     y_min = -6000,
     place_offset_y = 1,
@@ -1016,7 +1018,8 @@ minetest.register_node("livingcaves:stalagmitelargeend", {
     },
     groups = {
         cracky = 3,
-        stone = 1
+        stone = 1,
+        attached_node = 3
     },
     sounds = default.node_sound_stone_defaults(),
 
@@ -1119,7 +1122,8 @@ minetest.register_node("livingcaves:stalagtiteend", {
     },
     groups = {
         cracky = 3,
-        stone = 1
+        stone = 1,
+        attached_node = 4
     },
     sounds = default.node_sound_stone_defaults(),
 
