@@ -191,7 +191,7 @@ minetest.register_decoration({
 minetest.register_node("livingcaves:moss", {
     description = S "Cave Moss",
     drawtype = "plantlike",
-    waving = 2, -- 0
+    waving = 0,
     visual_scale = 1.0,
     tiles = {"livingcaves_moss.png"},
     inventory_image = "livingcaves_moss.png",
