@@ -405,7 +405,8 @@ minetest.register_craft({
 --- coocking
 
 minetest.register_node("livingcaves:healingsoup", {
-    description = S("Healing Soup"),
+    description = S("Healing Soup") .. '\n' ..
+    minetest.colorize('#DEB887', S('Hunger') .. ': 5'),
     drawtype = "plantlike",
     paramtype = "light",
     sunlight_propagates = true,
@@ -427,9 +428,16 @@ minetest.register_node("livingcaves:healingsoup", {
         drink = 1,
         food = 1,
         snappy = 3,
-        flammable = 2
+        flammable = 2,
+        hunger_amount = 5
     },
-    on_use = minetest.item_eat(5),
+    on_use = function(itemstack, user, pointed_thing)
+		local hunger_amount = minetest.get_item_group(itemstack:get_name(), "hunger_amount") or 0
+		if hunger_amount == 0 then 
+			return itemstack
+		end
+		minetest.item_eat(hunger_amount)
+	end,
     sounds = default.node_sound_metal_defaults()
 })
 

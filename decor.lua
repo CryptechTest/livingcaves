@@ -2068,21 +2068,29 @@ minetest.register_node("livingcaves:bacteriacave_mold3", {
 })
 
 minetest.register_node("livingcaves:mushroom_edible", {
-    description = S("Smelly Mushroom"),
+    description = S("Smelly Mushroom") .. '\n' ..
+    minetest.colorize('#DEB887', S('Hunger') .. ': 5'),
     drawtype = "allfaces_optional",
     waving = 0,
     visual_scale = 1.0,
     tiles = {"livingcaves_mushroom2.png"},
     special_tiles = {"livingcaves_mushroom2.png"},
     paramtype = "light",
-    on_use = minetest.item_eat(5),
+    on_use = function(itemstack, user, pointed_thing)
+		local hunger_amount = minetest.get_item_group(itemstack:get_name(), "hunger_amount") or 0
+		if hunger_amount == 0 then 
+			return itemstack
+		end
+		minetest.item_eat(hunger_amount)
+	end,
     is_ground_content = false,
     groups = {
         food = 1,
         snappy = 3,
         leafdecay = 3,
         flammable = 2,
-        attached_node = 3
+        attached_node = 3,
+        hunger_amount = 5
     },
     drop = {
         max_items = 1,
