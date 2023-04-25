@@ -158,7 +158,7 @@ minetest.register_node("livingcaves:root_lamp", {
 minetest.register_craft({
     output = "livingcaves:root_lamp",
     recipe = { { "livingcaves:rootcave_hangingroot", "livingcaves:glowshroom_top", "livingcaves:glowshroom" },
-        { "", "", "" } }
+        { "",                                 "",                           "" } }
 })
 
 minetest.register_craft({
@@ -432,6 +432,34 @@ minetest.register_node("livingcaves:healingsoup", {
         local hunger_amount = minetest.get_item_group(itemstack:get_name(), "hunger_amount") or 0
         if hunger_amount == 0 then
             return itemstack
+        end
+        local hp = user:get_hp()               -- usuario consegue o valor atual de sua vida
+        if hp ~= 20 then                       -- comparando vida
+            user:set_hp(math.min(20, hp + 20)) -- atribuindo mais 5 de vida
+            --itemstack:take_item( )
+        end
+
+        minetest.sound_play("bebendo", {
+            pos = pos,
+            gain = 1.0,
+            max_hear_distance = 5,
+        })
+
+        local pos = user:getpos()
+
+        for i = 1, 30 do
+            minetest.add_particle({
+                pos = pos,
+                acceleration = 0,
+                velocity = { x = math.random(-3, 3), y = math.random(-3, 3), z = math.random(-3, 3) },
+                -- x ou y ,ou z  = random (-3 right , 3 left )
+                size = 2,
+                expirationtime = 2.0,
+                collisiondetection = false,
+                vertical = false,
+                texture = "cura.png",
+                glow = 8,
+            })
         end
         return minetest.item_eat(hunger_amount)(itemstack, user, pointed_thing)
     end,
