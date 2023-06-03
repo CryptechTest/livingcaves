@@ -318,7 +318,7 @@ minetest.register_decoration({
     fill_ratio = 8,
     biomes = {"snowy_grassland", "icesheet_under", "icesheet", "snowy_grassland_under", "tundra_highland", "tundra_beach", "tundra_under", "taiga", "taiga_under", "livingfloatlands:coldsteppe"},
     flags = "force_placement,all_floors",
-    y_max = 10,
+    y_max = 0,
     y_min = -190, -- 30
     decoration = "livingcaves:icecave_ice"
 
@@ -333,7 +333,7 @@ minetest.register_decoration({
     fill_ratio = 8,
     biomes = {"snowy_grassland", "icesheet_under", "icesheet", "snowy_grassland_under", "tundra_highland", "tundra_beach", "tundra_under", "taiga", "taiga_under", "livingfloatlands:coldsteppe"},
     flags = "force_placement,all_ceilings",
-    y_max = 10,
+    y_max = 0,
     y_min = -190, -- 30
     decoration = "livingcaves:icecave_ice2"
 
@@ -350,7 +350,7 @@ minetest.register_decoration({
     biomes = {"coniferous_forest_under", "coniferous_forest", "deciduous_forest_under", "deciduous_forest", "savanna", "savanna_under", "rainforest", "rainforest_swamp", "rainforest_under", "naturalbiomes:alpine", "naturalbiomes:mediterranean", "naturalbiomes:wetsavanna", "livingjungle:jungle", "livingfloatlands:coldgiantforest", "livingfloatlands:giantforest", "livingfloatlands:paleojungle"},
     flags = "force_placement,all_ceilings",
     y_max = -1,
-    y_min = -90, -- 30
+    y_min = -110, -- 30
     decoration = "livingcaves:rootdirt"
 
 })
@@ -365,7 +365,7 @@ minetest.register_decoration({
     biomes = {"coniferous_forest_under", "coniferous_forest", "deciduous_forest_under", "deciduous_forest", "savanna", "savanna_under", "rainforest", "rainforest_swamp", "rainforest_under", "naturalbiomes:alpine", "naturalbiomes:mediterranean", "naturalbiomes:wetsavanna", "livingjungle:jungle", "livingfloatlands:coldgiantforest", "livingfloatlands:giantforest", "livingfloatlands:paleojungle"},
     flags = "force_placement,all_ceilings",
     y_max = -1,
-    y_min = -90, -- 30
+    y_min = -110, -- 30
     decoration = "livingcaves:rootdirt2"
 
 })
