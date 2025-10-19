@@ -136,7 +136,7 @@ minetest.register_node("livingcaves:icecave_ice2", {
 minetest.register_node("livingcaves:bacteriacave_trapstone", {
 	description = S("Flesh Eating Bacteria Trapstone"),
 	tiles = {"livingcaves_bacteriacave_trapstone.png"},
-	groups = {choppy = 3, wood = 1},
+	groups = {choppy = 3, stone = 1},
 	drop = "livingcaves:bacteriacave_trapstone",
 	legacy_mineral = true,
 	sounds = default.node_sound_stone_defaults(),
@@ -145,7 +145,7 @@ minetest.register_node("livingcaves:bacteriacave_trapstone", {
 minetest.register_node("livingcaves:bacteriacave_trapnode", {
 	description = S("Flesh Eating Bacteria Trap"),
 	tiles = {"livingcaves_bacteriacave_bottom.png"},
-	groups = {choppy = 3, wood = 1},
+	groups = {choppy = 3, stone = 1},
 	walkable = false,
 	drop = "livingcaves:bacteriacave_trapnode",
 	legacy_mineral = true,
